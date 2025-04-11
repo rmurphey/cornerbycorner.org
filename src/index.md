@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: Home
 description: Welcome to Corner by Corner
 ---

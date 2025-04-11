@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: Contact
 description: Get in touch with Corner by Corner
 ---

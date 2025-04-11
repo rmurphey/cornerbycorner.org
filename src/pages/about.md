@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: About
 description: Learn about Corner by Corner
 ---

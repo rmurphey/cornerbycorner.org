@@ -8,6 +8,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("assets");
   
+  // Add year shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -28,10 +31,10 @@ module.exports = function(eleventyConfig) {
   
   return {
     dir: {
-      input: "pages",      // Pages are in the pages/ directory
-      output: "_site",     // Output to _site directory
-      includes: "../_includes",  // Look for includes one level up
-      layouts: "../_includes/layouts"  // Look for layouts one level up
+      input: "src",
+      output: "_site",
+      includes: "_includes",
+      layouts: "layouts"
     },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
