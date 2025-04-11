@@ -1,0 +1,22 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+# Production context: all deploys from the main branch 
+# will inherit these settings
+[context.production]
+  environment = { NODE_VERSION = "16.13.0" }
+
+# Deploy Preview context: all deploys generated from a pull/merge request
+# will inherit these settings
+[context.deploy-preview]
+  environment = { NODE_VERSION = "16.13.0" }
+
+# Specific branch context: all deploys from this specific branch will inherit these settings
+[context.branch-deploy]
+  environment = { NODE_VERSION = "16.13.0" }
+  
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404

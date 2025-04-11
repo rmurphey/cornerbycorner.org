@@ -1,0 +1,23 @@
+{
+  "name": "cornerbycorner.org",
+  "version": "1.0.0",
+  "description": "Corner by Corner website built with 11ty",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/cornerbycorner.org.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "clean-css": "^5.3.2",
+    "html-minifier": "^4.0.0"
+  }
+}
