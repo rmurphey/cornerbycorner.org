@@ -21,6 +21,7 @@ Effective signage increases your visibility and your impact when you’re demons
 - **Budget-friendly**: Heavy poster board or foam core (protect from rain).
 - **Sustainable**: Repurposed cardboard with clear coating for water resistance.
 - **Handle Integration**: Add PVC pipe or wooden dowel handles for easier holding.
+- **Acrylic paint or markers**: 
 
 ## Font & Text
 
@@ -44,12 +45,11 @@ Effective signage increases your visibility and your impact when you’re demons
 - **Waterproofing**: Laminate paper signs or use clear packing tape to seal.
 - **Reflection**: Avoid glossy finishes that might reflect sunlight and become unreadable.
 
-## Safety & Positioning
+## Positioning
 
 - **Visibility**: Stand where you're visible but not blocking traffic or sidewalks.
 - **Sign Height**: Hold signs between waist and shoulder height for optimal viewing.
 - **Group Formation**: Space demonstrators 5-10 feet apart for multiple sign reading.
-- **Weather Adjustments**: Consider smaller signs on windy days
 
 ## Maintenance
 

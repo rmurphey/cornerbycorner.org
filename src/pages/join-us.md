@@ -19,14 +19,6 @@ Thank you for your interest in joining our movement! Getting started is simple, 
 
 4. **Bring a friend** - It's safer and more fun with others. Invite like-minded people to join you.
 
-## Safety Tips
-
-- Stay on public property (sidewalks, public squares)
-- Remain non-violent and calm if confronted
-- Consider filming your protest for documentation
-- Bring water and weather-appropriate clothing
-- Know your rights - peaceful protest is constitutionally protected
-
 ## Connect With Us
 
 - Share your experience on social media using #CornerByCorner
