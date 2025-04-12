@@ -1,5 +1,14 @@
 const CleanCSS = require("clean-css");
 const htmlmin = require("html-minifier");
+const path = require("path");
+
+// Try to require webpack, but don't fail if it's not installed
+let webpack;
+try {
+  webpack = require("webpack");
+} catch (e) {
+  console.warn("Webpack not found. JS bundling will be skipped. Run 'npm install --save-dev webpack webpack-cli terser-webpack-plugin babel-loader @babel/core @babel/preset-env' to enable JS bundling.");
+}
 
 module.exports = function(eleventyConfig) {
   // Copy static assets
@@ -28,6 +37,30 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+  
+  // Build and minify JS with webpack (if available)
+  if (webpack) {
+    eleventyConfig.on("beforeBuild", () => {
+      try {
+        const webpackConfig = require("./webpack.config.js");
+        return new Promise((resolve, reject) => {
+          webpack(webpackConfig, (err, stats) => {
+            if (err || stats.hasErrors()) {
+              console.error(stats.toString());
+              reject(err || new Error("Webpack compilation failed"));
+              return;
+            }
+            console.log(stats.toString({ colors: true }));
+            resolve();
+          });
+        });
+      } catch (e) {
+        console.error("Error running webpack:", e);
+        // Continue with the Eleventy build even if webpack fails
+        return Promise.resolve();
+      }
+    });
+  }
   
   return {
     dir: {
