@@ -1,27 +1,24 @@
-# cornerbycorner.org
+# Corner by Corner
 
-This is a website built with [11ty](https://www.11ty.dev/) and deployed on [Netlify](https://www.netlify.com/).
+A personal website built with Eleventy and the Eleventy Duo theme.
 
-## Development
+## Setup
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Setup
 1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Run `npm start` to start the development server
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Build for production: `npm run build`
 
-### Project Structure
-- `pages/` - All site content pages (Markdown, HTML, etc.)
-- `_includes/` - Layout templates and partials
-- `assets/` - Static assets like CSS, JavaScript, and images
+## Structure
 
-### Commands
-- `npm start` - Start development server
-- `npm run build` - Build the site for production
-- `npm run debug` - Build with debugging information
+- `/src`: Source files
+  - `/_data`: Site data
+  - `/_includes`: Layouts and partials
+  - `/css`: Stylesheets
+  - `/js`: JavaScript files
+  - `/posts`: Blog posts
+  - `/images`: Image assets
 
-## Deployment
-This site is configured to deploy automatically to Netlify when changes are pushed to the main branch.
+## Adding Content
+
+To add a new blog post, create a new Markdown file in the `/src/posts/` directory.

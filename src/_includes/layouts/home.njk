@@ -1,0 +1,26 @@
+{% extends "../base.njk" %}
+
+{% block content %}
+<section class="hero flow-lg">
+  <h1 class="hero-title">{{ hero.title }}</h1>
+  <p class="hero-description">{{ hero.description }}</p>
+  
+  {% if hero.buttonText and hero.buttonUrl %}
+  <a href="{{ hero.buttonUrl }}" class="button">{{ hero.buttonText }}</a>
+  {% endif %}
+</section>
+
+<section class="recent-posts">
+  <h2>Recent Posts</h2>
+  
+  <div class="post-list">
+    {% for post in collections.posts | limit(6) %}
+      {% include "partials/post-card.njk" %}
+    {% endfor %}
+  </div>
+  
+  <div class="mt-4 text-center">
+    <a href="/blog/" class="button">View All Posts</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; {{ site.name }} {{ global.currentYear }}. All rights reserved.</p>
+    
+    {% if site.social %}
+    <div class="social-links">
+      {% for item in site.social %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="social-link">
+        {{ item.platform }}
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</footer>

@@ -1,0 +1,54 @@
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.site-content {
+  padding: 2rem 0;
+}
+
+/* Content flow */
+.flow > * + * {
+  margin-top: 1rem;
+}
+
+.flow-lg > * + * {
+  margin-top: 2rem;
+}
+
+/* Links and buttons */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 80%, black);
+  text-decoration: none;
+}
+
+/* Generic tag style */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}

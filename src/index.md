@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Home
-description: Corner by corner
+title: Welcome
+permalink: /welcome/
 ---
 
 # Corner by corner

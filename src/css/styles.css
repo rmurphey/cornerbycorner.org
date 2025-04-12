@@ -1,0 +1,118 @@
+@import 'reset.css';
+@import 'variables.css';
+@import 'typography.css';
+@import 'global.css';
+@import 'utils.css';
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-item a:hover {
+  color: var(--primary-color);
+}
+
+/* Home */
+.hero {
+  padding: 4rem 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 45ch;
+}
+
+/* Posts */
+.post-list {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.post-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-background);
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-title {
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+}
+
+.post-excerpt {
+  margin-top: 0.5rem;
+}
+
+/* Single Post */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-meta {
+  color: var(--text-color-light);
+}
+
+.post-content {
+  max-width: 70ch;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

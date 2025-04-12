@@ -1,6 +1,10 @@
 const CleanCSS = require("clean-css");
 const htmlmin = require("html-minifier");
 const path = require("path");
+const { DateTime } = require('luxon');
+const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 // Try to require webpack, but don't fail if it's not installed
 let webpack;
@@ -16,6 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy('src/fonts');
   
   // Add year shortcode
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
@@ -37,6 +42,32 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+
+  // Add plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginRss);
+
+  // Add date formatter filters
+  eleventyConfig.addFilter('dateIso', date => {
+    return DateTime.fromJSDate(date).toISO();
+  });
+
+  eleventyConfig.addFilter('dateReadable', date => {
+    return DateTime.fromJSDate(date).toFormat('dd LLL yyyy');
+  });
+
+  // Only minify HTML if we are in production
+  if (process.env.NODE_ENV === 'production') {
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  }
+
+  // Collections
+  eleventyConfig.addCollection('posts', collection => {
+    return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+  });
+
+  // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+  eleventyConfig.setUseGitIgnore(false);
   
   // Build and minify JS with webpack (if available)
   if (webpack) {
@@ -66,8 +97,8 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "_site",
-      includes: "_includes",
-      layouts: "layouts"
+      includes: "_includes"
+      // No layouts key - use the default (_includes)
     },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
