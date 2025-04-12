@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Join Us
+description: How to join the corner by corner movement
+---
+
+# Join Us
+
+Thank you for your interest in joining our movement! Getting started is simple, and every person makes a difference.
+
+## How to Join
+
+1. **Pick a corner** - Choose a visible intersection in your community with good foot or vehicle traffic.
+
+2. **Make a sign** - Check out our [sign suggestions](/pages/signs) or create your own message that resonates with you.
+
+3. **Show up consistently** - Even 30 minutes once a week makes an impact. Consistency matters more than duration.
+
+4. **Bring a friend** - It's safer and more fun with others. Invite like-minded people to join you.
+
+## Safety Tips
+
+- Stay on public property (sidewalks, public squares)
+- Remain non-violent and calm if confronted
+- Consider filming your protest for documentation
+- Bring water and weather-appropriate clothing
+- Know your rights - peaceful protest is constitutionally protected
+
+## Connect With Us
+
+- Join our weekly newsletter for updates
+- Share your experience on social media using #CornerByCorner
+- Email us at [contact@cornerbycorner.org](mailto:contact@cornerbycorner.org) (if you'd like to register your corner or have questions)
+
+## Already Protesting?
+
+If you're already holding a corner, please let us know! We're creating a map of active corners to inspire others and show the growing strength of our movement.
