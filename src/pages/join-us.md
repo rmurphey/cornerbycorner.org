@@ -11,13 +11,10 @@ Thank you for your interest in joining our movement! Getting started is simple, 
 
 ## How to Join
 
-1. **Pick a corner** - Choose a visible intersection in your community with good foot or vehicle traffic.
-
-2. **Make a sign** - Check out our [sign suggestions](/pages/signs) or create your own message that resonates with you.
-
-3. **Show up consistently** - Even 30 minutes once a week makes an impact. Consistency matters more than duration.
-
-4. **Bring a friend** - It's safer and more fun with others. Invite like-minded people to join you.
+- **Pick a corner:** Choose a visible intersection in your community with good foot or vehicle traffic.
+- **Make a sign:** Check out our [sign suggestions](/pages/signs) or create your own message that resonates with you.
+- **Show up consistently:** Even 30 minutes once a week makes an impact. Consistency matters more than duration.
+- **Bring a friend:** It's safer and more fun with others. Invite like-minded people to join you.
 
 ## Connect With Us
 
@@ -34,4 +31,5 @@ There are lots of other ways to help:
 
 - Promote our work on social media.
 - Purchase supplies and make signs for others.
+- Encourage friends.
 - Join our Discord for other opportunities.
