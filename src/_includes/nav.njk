@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+    <li><a href="/pages/about/" {% if page.url == '/pages/about/' %}aria-current="page"{% endif %}>About</a></li>
+    <li><a href="/pages/join-us/" {% if page.url == '/pages/join-us/' %}aria-current="page"{% endif %}>Join Us</a></li>
+    <li><a href="/pages/signs/" {% if page.url == '/pages/signs/' %}aria-current="page"{% endif %}>Signs</a></li>
+    <li><a href="/pages/contact/" {% if page.url == '/pages/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+  </ul>
+</nav>

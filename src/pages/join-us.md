@@ -2,6 +2,7 @@
 layout: base.njk
 title: Join Us
 description: How to join the corner by corner movement
+permalink: /pages/join-us/
 ---
 
 # Join Us
