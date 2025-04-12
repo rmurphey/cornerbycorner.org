@@ -29,10 +29,17 @@ Thank you for your interest in joining our movement! Getting started is simple, 
 
 ## Connect With Us
 
-- Join our weekly newsletter for updates
 - Share your experience on social media using #CornerByCorner
 - Email us at [contact@cornerbycorner.org](mailto:contact@cornerbycorner.org) (if you'd like to register your corner or have questions)
 
 ## Already Protesting?
 
 If you're already holding a corner, please let us know! We're creating a map of active corners to inspire others and show the growing strength of our movement.
+
+## Can’t make it to the corner?
+
+There are lots of other ways to help:
+
+- Promote our work on social media.
+- Purchase supplies and make signs for others.
+- Join our Discord for other opportunities.

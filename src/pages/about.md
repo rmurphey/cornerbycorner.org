@@ -7,9 +7,10 @@ permalink: /pages/about/
 
 # About Corner by Corner
 
-## Our Origins
+Corner by Corner is a began with a single person standing at an intersection in Durham, N.C., armed with nothing but a sign and a conviction that something needed to change. That simple act of resistance has grown into a network of concerned citizens determined to stand up for democracy.
 
-Corner by Corner began with a single person standing at an intersection in Durham, N.C., armed with nothing but a sign and a conviction that something needed to change. That simple act of resistance has grown into a network of concerned citizens determined to stand up for democracy.
+- [Read the article](https://indyweek.com/news/how-one-durham-resident-is-finding-community-through-solo-roadside-political-protests/)
+
 
 ## Our Mission
 
@@ -17,11 +18,11 @@ We are everyday people united in our concern for the state of our democracy. We 
 
 ## Our Values
 
-- **Truth**: We promote fact-based awareness of political events
-- **Democracy**: We stand for the defense of our Constitution and democratic institutions
-- **Accountability**: We demand accountability from our elected officials
-- **Solidarity**: We support one another in peaceful protest
-- **Accessibility**: Anyone can participate, anywhere, anytime
+- **Truth**: We promote fact-based awareness of political events.
+- **Democracy**: We stand for the defense of our Constitution and democratic institutions.
+- **Accountability**: We demand accountability from our elected officials.
+- **Solidarity**: We support one another in peaceful protest.
+- **Accessibility**: Anyone can participate, anywhere, anytime.
 
 ## Our Impact
 
