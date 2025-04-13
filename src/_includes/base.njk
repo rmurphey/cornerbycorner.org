@@ -45,6 +45,12 @@
                 gap: 0.5rem;
             }
         }
+        hr.header-divider {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background-color: #eaeaea;
+        }
     </style>
 </head>
 <body>
@@ -56,6 +62,8 @@
         </div>
         {% include "partials/nav.njk" %}
     </header>
+    
+    <hr class="header-divider">
     
     <main>
         {{ content | safe }}
