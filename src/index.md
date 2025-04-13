@@ -4,7 +4,7 @@ title: Welcome
 permalink: /
 ---
 
-# Corner by corner
+# A community of people taking action
 
 We are a group of regular people who are finding common purpose in protesting the current regime's abuses of the Constitution. 
 
