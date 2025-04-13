@@ -33,12 +33,13 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: #0066cc; /* Set to blue directly */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
+  color: #004d99; /* Darker blue on hover */
   text-decoration: underline;
 }
 
@@ -68,4 +69,38 @@ pre {
 pre code {
   background-color: transparent;
   padding: 0;
+}
+
+/* List styles */
+ul:not(.nav-list),
+ol:not(.nav-list) {
+  padding-left: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+ul:not(.nav-list) {
+  list-style-type: disc;
+}
+
+ul:not(.nav-list) ul {
+  list-style-type: circle;
+  margin-bottom: 0;
+}
+
+ul:not(.nav-list) ul ul {
+  list-style-type: square;
+}
+
+ol:not(.nav-list) {
+  list-style-type: decimal;
+}
+
+ol:not(.nav-list) ol {
+  list-style-type: lower-alpha;
+  margin-bottom: 0;
+}
+
+ul:not(.nav-list) li,
+ol:not(.nav-list) li {
+  margin-bottom: 0.5rem;
 }

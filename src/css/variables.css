@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #5c63ee;
+  --primary-color: #0066cc; /* Changed to a standard blue color */
   --secondary-color: #eef0ff;
   --background-color: #ffffff;
   --text-color: #222222;
@@ -12,16 +12,18 @@
   
   --container-max-width: 1200px;
   --container-padding: 1rem;
+  --link-color: #0066cc; /* Added a specific link color variable */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #6d74f2;
+    --primary-color: #4d94ff; /* Lighter blue for dark mode */
     --secondary-color: #282c47;
     --background-color: #121212;
     --text-color: #f0f0f0;
     --text-color-light: #a0a0a0;
     --border-color: #2c2c2c;
     --card-background: #1e1e1e;
+    --link-color: #4d94ff; /* Lighter blue for dark mode */
   }
 }

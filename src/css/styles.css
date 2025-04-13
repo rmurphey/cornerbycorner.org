@@ -49,11 +49,11 @@
 
 .nav-item a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-color); /* Keep nav links as text color */
 }
 
 .nav-item a:hover {
-  color: var(--primary-color);
+  color: #0066cc; /* Use blue on hover for consistency */
 }
 
 /* Home */

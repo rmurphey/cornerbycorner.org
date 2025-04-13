@@ -19,11 +19,25 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements */
-ul,
-ol {
+/* Remove list styles only for navigation lists, preserve for content */
+nav ul,
+nav ol,
+.nav-list {
   list-style: none;
   padding: 0;
+}
+
+/* All other lists should show bullets/numbers */
+ul:not(.nav-list):not(nav ul) {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+ol:not(.nav-list):not(nav ol) {
+  list-style: decimal;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Set core root defaults */
