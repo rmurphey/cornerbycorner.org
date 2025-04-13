@@ -8,12 +8,53 @@
     <link rel="stylesheet" href="/css/styles.css?v={% timestamp %}">
     <!-- Include the webpack CSS output -->
     <link rel="stylesheet" href="/assets/css/webpack-main.css?v={% timestamp %}">
+    <style>
+        /* Ensure minimal styling even if external CSS fails */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header nav {
+            padding: 1rem 0;
+        }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eaeaea;
+        }
+        .site-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+        }
+        .site-nav a {
+            text-decoration: none;
+            color: #222;
+        }
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .site-nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-        </nav>
+        <div class="site-title">
+            <a href="/" style="text-decoration: none; color: inherit;">
+                <h1 style="font-size: 1.5rem; margin: 1rem 0 0.5rem 0;">Corner by Corner</h1>
+            </a>
+        </div>
+        {% include "partials/nav.njk" %}
     </header>
     
     <main>

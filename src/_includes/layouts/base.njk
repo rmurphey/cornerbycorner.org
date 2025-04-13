@@ -33,13 +33,36 @@
         h1, h2, h3 {
             margin-bottom: 1rem;
         }
+        .site-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+        }
+        .site-nav a {
+            text-decoration: none;
+            color: #222;
+        }
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .site-nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-        </nav>
+        <div class="site-title">
+            <a href="/" style="text-decoration: none; color: inherit;">
+                <h1 style="font-size: 1.5rem; margin: 1rem 0 0.5rem 0;">Corner by Corner</h1>
+            </a>
+        </div>
+        {% include "partials/nav.njk" %}
     </header>
     
     <main>
