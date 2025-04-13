@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}Corner by Corner</title>
+    <!-- Use the timestamp shortcode for cache busting -->
+    <link rel="stylesheet" href="/css/styles.css?v={% timestamp %}">
+    <link rel="stylesheet" href="/css/style.css?v={% timestamp %}">
+    <style>
+        /* Ensure minimal styling even if external CSS fails */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header nav {
+            padding: 1rem 0;
+        }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eaeaea;
+        }
+        .post-card {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="site-title"><a href="/">Corner by Corner</a></h1>
-      {% include "../nav.njk" %}
-    </div>
-  </header>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    
+    <main>
+        {{ content | safe }}
+    </main>
+    
+    <footer>
+        <p>&copy; {% year %} Corner by Corner</p>
+    </footer>
 
-  <main>
-    <div class="container">
-      {% block content %}{{ content | safe }}{% endblock %}
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; {% year %} Corner by Corner. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>.</p>
-    </div>
-  </footer>
-  
-  <script src="/js/main.js"></script>
+    <!-- Include JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="/assets/js/main.bundle.js"></script>
 </body>
 </html>

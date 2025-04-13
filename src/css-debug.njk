@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+title: CSS Debug Page
+---
+
+<div style="padding: 20px; border: 1px solid #ccc; margin: 20px; background: #f9f9f9;">
+  <h1>CSS Debug Information</h1>
+  
+  <h2>CSS Links in Page</h2>
+  <pre id="css-links"></pre>
+  
+  <h2>CSS File Content</h2>
+  <div id="css-content" style="white-space: pre; overflow: auto; max-height: 300px; border: 1px solid #ddd; padding: 10px;">Loading...</div>
+  
+  <h2>CSS File Status</h2>
+  <div id="css-status">Checking...</div>
+  
+  <script>
+    // Display all CSS links in the page
+    document.getElementById('css-links').textContent = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+      .map(link => link.href)
+      .join('\n');
+    
+    // Try to fetch the CSS content
+    fetch('/css/styles.css')
+      .then(response => {
+        if (!response.ok) throw new Error(`CSS file not found: ${response.status}`);
+        document.getElementById('css-status').innerHTML = 
+          '<span style="color: green;">✓ CSS file found!</span> ' +
+          `<br>Content-Type: ${response.headers.get('content-type')} ` +
+          `<br>Content-Length: ${response.headers.get('content-length')} bytes`;
+        return response.text();
+      })
+      .then(css => {
+        document.getElementById('css-content').textContent = css.substring(0, 500) + 
+          (css.length > 500 ? '\n... (truncated)' : '');
+      })
+      .catch(error => {
+        document.getElementById('css-content').textContent = `Error: ${error.message}`;
+        document.getElementById('css-status').innerHTML = 
+          '<span style="color: red;">✗ CSS file not found!</span> ' +
+          '<br>Please check your CSS file paths and Eleventy configuration.';
+      });
+  </script>
+</div>
+
+<div style="padding: 20px; border: 1px solid #ccc; margin: 20px; background: #f9f9f9;">
+  <h2>CSS Structure Checker</h2>
+  
+  <h3>CSS Files in _site/css/</h3>
+  <div id="file-list">Checking...</div>
+  
+  <h3>CSS Sources</h3>
+  <ul>
+    <li>Main CSS source should be at: <code>src/css/styles.css</code></li>
+    <li>Alternative CSS source: <code>src/_includes/css/styles.css</code></li>
+  </ul>
+  
+  <button id="check-btn" style="padding: 8px 16px;">Check Files</button>
+  
+  <script>
+    document.getElementById('check-btn').addEventListener('click', function() {
+      const paths = [
+        '/css/styles.css',
+        '/css/style.css'
+      ];
+      
+      const fileList = document.getElementById('file-list');
+      fileList.innerHTML = 'Checking files...';
+      
+      Promise.all(paths.map(path => 
+        fetch(path)
+          .then(response => ({
+            path,
+            exists: response.ok,
+            status: response.status
+          }))
+          .catch(() => ({ path, exists: false, status: 'error' }))
+      )).then(results => {
+        fileList.innerHTML = results
+          .map(r => `<div>${r.exists ? '✓' : '✗'} ${r.path} - ${r.exists ? 'Found' : 'Not found'} (${r.status})</div>`)
+          .join('');
+      });
+    });
+  </script>
+</div>

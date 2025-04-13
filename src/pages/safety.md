@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Safety
 description: Safety guidelines for corner demonstrations
 ---

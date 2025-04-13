@@ -1,8 +1,25 @@
-@import 'reset.css';
-@import 'variables.css';
-@import 'typography.css';
-@import 'global.css';
-@import 'utils.css';
+/* Main styles import file - this will be the only file we need to reference in HTML */
+
+/* Import all CSS files from the directory */
+@import "reset.css";
+@import "variables.css";
+@import "typography.css";
+@import "global.css";
+@import "utils.css";
+
+/* Other imports that may exist */
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+@import "theme.css";
+
+/* The rest of the styles */
+::after,
+::before {
+  box-sizing: border-box
+}
+
+/* Add any overrides or additional styles here */
 
 /* Header */
 .site-header {

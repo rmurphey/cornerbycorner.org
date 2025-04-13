@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Contact
 description: Get in touch with Corner by Corner
 permalink: /pages/contact/

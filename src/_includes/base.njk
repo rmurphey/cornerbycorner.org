@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/images/favicon.png" type="image/png">
-  {% block head %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}Corner by Corner</title>
+    <!-- Use both CSS file locations for maximum compatibility -->
+    <link rel="stylesheet" href="/css/styles.css?v={% timestamp %}">
+    <!-- Include the webpack CSS output -->
+    <link rel="stylesheet" href="/assets/css/webpack-main.css?v={% timestamp %}">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="site-title"><a href="/">Corner by Corner</a></h1>
-      {% include "nav.njk" %}
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      {% block content %}{{ content | safe }}{% endblock %}
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; {% year %} Corner by Corner. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>.</p>
-    </div>
-  </footer>
-  
-  <script src="/js/main.js"></script>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    
+    <main>
+        {{ content | safe }}
+    </main>
+    
+    <footer>
+        <p>&copy; {% year %} Corner by Corner</p>
+    </footer>
+    
+    <!-- Include the webpack JavaScript bundle -->
+    <script src="/assets/js/main.bundle.js?v={% timestamp %}"></script>
 </body>
 </html>

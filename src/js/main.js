@@ -1,5 +1,7 @@
-// Main JavaScript file for the site
+// Main JavaScript file
+console.log('Main JavaScript loaded');
 
+// Add your JavaScript code here
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Site loaded successfully!');
   

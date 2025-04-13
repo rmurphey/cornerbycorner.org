@@ -1,29 +1,17 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: {
-    main: './src/js/main.js', // Changed from index.js to main.js
-    // Add other entry points as needed
+    main: './src/js/main.js',
   },
   output: {
-    path: path.resolve(__dirname, '_site/js'),
-    filename: '[name].bundle.js'
-  },
-  mode: process.env.NODE_ENV || 'production',
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin({
-      extractComments: false,
-      terserOptions: {
-        format: {
-          comments: false,
-        },
-        compress: {
-          drop_console: true,
-        },
-      },
-    })],
+    path: path.resolve(__dirname, '_site/assets'),
+    filename: 'js/[name].bundle.js',
   },
   module: {
     rules: [
@@ -36,7 +24,41 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      // Still keep CSS processing for any CSS imported in JavaScript
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader'
+        ]
       }
     ]
-  }
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin()
+    ],
+  },
+  // Add this to avoid issues with optional dependencies
+  resolve: {
+    fallback: {
+      fs: false,
+      path: false,
+      crypto: false,
+    },
+  },
+  plugins: [
+    // Remove the CopyWebpackPlugin that copies from src/_includes/css to _site/css
+    // since we're handling that in Eleventy now
+    
+    // Keep MiniCssExtractPlugin for any CSS imported in JavaScript
+    new MiniCssExtractPlugin({
+      filename: 'css/webpack-[name].css' // Change filename to avoid conflicts
+    })
+  ],
 };

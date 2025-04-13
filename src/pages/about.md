@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: About
 description: About the Corner by Corner movement
 permalink: /pages/about/

@@ -24,3 +24,7 @@ yarn-error.log
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Don't ignore compiled CSS
+!css
+!css/styles.css

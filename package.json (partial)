@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "prebuild": "node scripts/sync-asset-names.js",
+    "build": "npm run prebuild && eleventy && webpack"
+  }
+}
