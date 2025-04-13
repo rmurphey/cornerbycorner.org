@@ -11,7 +11,7 @@ We'd love to hear from you! Whether you're looking to join us, have questions ab
 
 ## How to Reach Us
 
-**Email**: [contact@cornerbycorner.org](mailto:contact@cornerbycorner.org)
+**Email**: [cornerbycornerprotest@gmail.com](mailto:cornerbycornerprotest@gmail.com)
 
 **Social Media**: Follow us and tag your posts with #CornerByCorner
 

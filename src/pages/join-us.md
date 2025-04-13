@@ -19,7 +19,7 @@ Thank you for your interest in joining our movement! Getting started is simple, 
 ## Connect With Us
 
 - Share your experience on social media using #CornerByCorner
-- Email us at [contact@cornerbycorner.org](mailto:contact@cornerbycorner.org) (if you'd like to register your corner or have questions)
+- Email us at [cornerbycornerprotest@gmail.com](mailto:cornerbycornerprotest@gmail.com) (if you'd like to register your corner or have questions)
 
 ## Already Protesting?
 
@@ -32,4 +32,3 @@ There are lots of other ways to help:
 - Promote our work on social media.
 - Purchase supplies and make signs for others.
 - Encourage friends.
-- Join our Discord for other opportunities.
